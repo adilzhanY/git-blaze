@@ -44,4 +44,4 @@ GitBlaze is currently in early development. Core authentication flows and baseli
 
 ## 🔗 Contact
 
-Project maintained by [Your Name] - [@adilzhanY](https://github.com/adilzhanY)
+Project maintained by Adilzhan - [@adilzhanY](https://github.com/adilzhanY)
