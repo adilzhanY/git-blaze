@@ -1,9 +1,14 @@
-import React from 'react'
+import HeroSection from "@/components/landingPage/HeroSection";
+import Reviews from "@/components/landingPage/Reviews";
+import React from "react";
 
-const page = () => {
+const Page = () => {
   return (
-    <div>Main page content</div>
-  )
-}
+    <>
+      <HeroSection />
+      <Reviews />
+    </>
+  );
+};
 
-export default page
+export default Page;
