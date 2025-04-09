@@ -1,5 +1,8 @@
-import React from "react";
+"use client";
+import React, { useEffect, useRef } from "react";
 import ReviewCard from "./ReviewCard";
+import Marquee from "react-fast-marquee";
+import { MailWarning } from "lucide-react";
 
 const Reviews = () => {
   const reviewList = [
@@ -41,15 +44,18 @@ const Reviews = () => {
       description="Straight up changed how I approach my code documentation"
     />,
   ];
+
   return (
     <>
       <div className="overflow-hidden flex flex-wrap justify-center gap-4 py-10 bg-black">
-        <div className="text-white text-2xl font-bold">What Developers say</div>
-        <ul className="flex gap-10 py-4 animate-infinite-scroll">
-          {[...reviewList, ...reviewList].map((review, index) => (
-            <li key={index}>{review}</li>
+        <div className="text-white text-2xl font-bold">
+          What Developers say
+        </div>
+        <Marquee pauseOnHover>
+          {reviewList.map((review, index) => (
+            <div key={index}>{review}</div>
           ))}
-        </ul>
+        </Marquee>
       </div>
     </>
   );

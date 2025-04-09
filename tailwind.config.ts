@@ -35,12 +35,18 @@ export default {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(calc(-50% - 20px))" },
         },
+        infiniteSliderRun: {
+          from: { left: "100%" },
+          to: { left: "calc(var(--width) * -1)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         tickers: "tickers 40s linear infinite",
         "infinite-scroll": "infinite-scroll 60s linear infinite",
+        infiniteSliderRun:
+          "infiniteSliderRun var(--duration) linear infinite",
       },
     },
   },

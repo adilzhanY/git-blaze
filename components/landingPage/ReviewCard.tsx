@@ -1,4 +1,8 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/components/ui/avatar";
 import {
   Card,
   CardContent,
@@ -15,13 +19,16 @@ interface ReviewCardProps {
   description: string;
 }
 
-const ReviewCard: React.FC<ReviewCardProps> = ({ name, description }) => {
+const ReviewCard: React.FC<ReviewCardProps> = ({
+  name,
+  description,
+}) => {
   const initials = name
     .split(" ")
     .map((word: string) => word[0])
     .join("");
   return (
-    <Card className="flex flex-col text-white p-4 m-2 w-64">
+    <Card className="flex flex-col text-white p-2 m-7 h-42 w-64">
       <CardHeader>
         <div className="flex">
           <Avatar className="md-2 size-12">
